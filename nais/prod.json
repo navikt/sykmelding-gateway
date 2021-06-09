@@ -13,6 +13,6 @@
   ],
   "env": {
     "ALLOWED_ORIGINS": "https://tjenester.nav.no,https://www.nav.no",
-    "SYKMELDINGER_BACKEND_URL": "https://api-gw.oera.no/sykmeldinger-backend"
+    "SYKMELDINGERBACKEND_URL": "https://api-gw.oera.no/sykmeldinger-backend"
   }
 }
