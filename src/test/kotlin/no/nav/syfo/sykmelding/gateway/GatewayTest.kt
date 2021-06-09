@@ -19,6 +19,7 @@ import org.springframework.test.web.reactive.server.WebTestClient
     ]
 )
 @AutoConfigureWireMock(port = 0)
+@Disabled
 class GatewayTest {
 
     @Autowired
