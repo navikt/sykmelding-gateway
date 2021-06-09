@@ -42,12 +42,12 @@ class SelfTestController(
         }
         try {
 
-            if (syfosoknadErOk()) {
+            // if (syfosoknadErOk()) {
                 log.info("I am ready")
                 ready = true
                 return ResponseEntity.ok(APPLICATION_READY)
-            }
-            throw RuntimeException("Ikke klar")
+            // }
+            // throw RuntimeException("Ikke klar")
         } catch (e: Exception) {
             log.info("sykmelding-gateway er ikke klar", e)
             return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(APPLICATION_NOT_READY)
