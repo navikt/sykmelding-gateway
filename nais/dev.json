@@ -1,0 +1,18 @@
+{
+  "app": "sykmelding-gateway",
+  "namespace": "teamsykmelding",
+  "team": "teamsykmelding",
+  "ingress": "https://sykmelding-gateway.dev.nav.no",
+  "minReplicas": 1,
+  "maxReplicas": 2,
+  "externalHosts": [
+    "api-gw-q1.oera.no"
+  ],
+  "secrets": [
+    "sykmeldinger-backend-proxy-q1-apigw-key"
+  ],
+  "env": {
+    "ALLOWED_ORIGINS": "https://tjenester-q1.nav.no,https://www-gcp.dev.nav.no,https://flex-vedtak-mock.dev.nav.no",
+    "SYKMELDINGER_BACKEND_URL": "https://api-gw-q1.oera.no/sykmeldinger-backend"
+  }
+}

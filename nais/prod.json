@@ -1,0 +1,18 @@
+{
+  "app": "sykmelding-gateway",
+  "namespace": "teamsykmelding",
+  "team": "teamsykmelding",
+  "ingress": "https://sykmelding-gateway.nav.no",
+  "minReplicas": 2,
+  "maxReplicas": 6,
+  "externalHosts": [
+    "api-gw.oera.no"
+  ],
+  "secrets": [
+    "sykmeldinger-backend-proxy-p-apigw-key"
+  ],
+  "env": {
+    "ALLOWED_ORIGINS": "https://tjenester.nav.no,https://www.nav.no",
+    "SYKMELDINGER_BACKEND_URL": "https://api-gw.oera.no/sykmeldinger-backend"
+  }
+}
