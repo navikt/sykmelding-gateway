@@ -4,16 +4,16 @@
   pathRewrite: false
   paths:
     get:
-      - api/v1/sykmeldinger
-      - api/v1/sykmeldinger/{sykmeldingId}
-      - api/v1/brukerinformasjon
-      - api/v1/syforest/sykmeldinger
-      - api/v1/syforest/arbeidsforhold
-      - api/v1/syforest/brukerinformasjon
+      - /api/v1/sykmeldinger
+      - /api/v1/sykmeldinger/{sykmeldingId}
+      - /api/v1/brukerinformasjon
+      - /api/v1/syforest/sykmeldinger
+      - /api/v1/syforest/arbeidsforhold
+      - /api/v1/syforest/brukerinformasjon
     post:
-      - api/v1/sykmeldinger/{sykmeldingId}/bekreft
-      - api/v1/sykmeldinger/{sykmeldingId}/bekreftAvvist
-      - api/v1/sykmeldinger/{sykmeldingId}/avbryt
-      - api/v1/sykmeldinger/{sykmeldingId}/gjenapne
-      - api/v1/sykmeldinger/{sykmeldingId}/send
-      - api/v2/sykmeldinger/{sykmeldingId}/send
+      - /api/v1/sykmeldinger/{sykmeldingId}/bekreft
+      - /api/v1/sykmeldinger/{sykmeldingId}/bekreftAvvist
+      - /api/v1/sykmeldinger/{sykmeldingId}/avbryt
+      - /api/v1/sykmeldinger/{sykmeldingId}/gjenapne
+      - /api/v1/sykmeldinger/{sykmeldingId}/send
+      - /api/v2/sykmeldinger/{sykmeldingId}/send
