@@ -90,7 +90,6 @@ class GatewayTest {
     fun `500 kall videresendes`() {
         stubFor(
             get(urlEqualTo("/sykmeldinger-backend/api/v1/sykmeldinger"))
-
                 .willReturn(
                     aResponse()
                         .withBody("{\"headers\":{\"Hello\":\"World\"}}")
@@ -123,7 +122,6 @@ class GatewayTest {
                 .willReturn(
                     aResponse()
                         .withBody("{\"headers\":{\"Hello\":\"World\"}}")
-
                         .withHeader("Content-Type", "application/json")
                 )
         )
