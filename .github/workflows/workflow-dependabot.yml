@@ -1,0 +1,37 @@
+name: Bygg (dependabot)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '/dependabot/**'
+env:
+  APP: sykmelding-gateway
+jobs:
+  build:
+    name: Bygg og test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+      - name: Checkout code
+        uses: actions/checkout@v2.4.0
+      - name: Gradle wrapper validation
+        uses: gradle/wrapper-validation-action@v1
+      - name: Setup gradle dependency cache
+        uses: actions/cache@v2.1.7
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      - name: Lint koden
+        run: ./gradlew ktlintCheck
+      - name: Test
+        run: ./gradlew test
+      - name: Bygg
+        run: ./gradlew bootJar
